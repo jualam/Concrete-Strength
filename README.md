@@ -29,7 +29,7 @@ seaborn
 scikit-learn
 You can install the required dependencies using pip:
 
-pip install numpy pandas matplotlib seaborn scikit-learn
+>pip install numpy pandas matplotlib seaborn scikit-learn
 
 # Data Analysis
 The dataset is first loaded and explored using the following techniques:
@@ -38,14 +38,14 @@ Descriptive statistics: Summary of features using describe() and info().
 Correlation analysis: A correlation matrix is generated to understand the relationships between the features and the target variable (compressive strength).
 We also used visualizations like pairplots and heatmaps to understand feature distributions and correlations.
 
-sns.heatmap(concrete.corr(), annot=True, cmap='Blues')
+>sns.heatmap(concrete.corr(), annot=True, cmap='Blues')
 plt.show()
 
 
 # Feature Engineering
 The features were standardized to ensure that they have comparable ranges. This was done using StandardScaler from the sklearn.preprocessing module.
 
-from sklearn.preprocessing import StandardScaler
+>from sklearn.preprocessing import StandardScaler
 features = concrete.iloc[:, :-1].to_numpy()
 features_standardized = StandardScaler().fit_transform(features)
 
