@@ -1,10 +1,10 @@
-#Concrete Compressive Strength Prediction
+# Concrete Compressive Strength Prediction
 This project analyzes a dataset containing various features of concrete mixtures to predict their compressive strength. Using machine learning and statistical analysis, the project explores feature correlations and builds a model to predict compressive strength based on concrete mixture components.
 
-#Introduction
+# Introduction
 Concrete compressive strength is a crucial factor in construction, determining the durability and load-bearing capacity of structures. The goal of this project is to use machine learning techniques to predict the compressive strength of concrete based on its ingredients.
 
-#Dataset
+# Dataset
 The dataset used contains 1030 samples of concrete mixtures and their corresponding compressive strengths. The features include:
 
 Cement (kg)
@@ -17,10 +17,10 @@ Fine Aggregate (kg)
 Age (days)
 Compressive Strength (MPa) - target variable
 
-#Data Source
+# Data Source
 The dataset is provided in an Excel file named concreteData.xlsx. Each row represents a unique concrete mixture, and the last column contains the observed compressive strength.
 
-#Installation
+# Installation
 To run this project, you need Python installed along with the following libraries:
 numpy
 pandas
@@ -33,7 +33,7 @@ You can install the required dependencies using pip:
 <pip install numpy pandas matplotlib seaborn scikit-learn>
 
 
-#Data Analysis
+# Data Analysis
 The dataset is first loaded and explored using the following techniques:
 
 Descriptive statistics: Summary of features using describe() and info().
@@ -46,7 +46,7 @@ Example:
 <plt.show()>
 
 
-#Feature Engineering
+# Feature Engineering
 The features were standardized to ensure that they have comparable ranges. This was done using StandardScaler from the sklearn.preprocessing module.
 
 <from sklearn.preprocessing import StandardScaler>
@@ -54,7 +54,7 @@ The features were standardized to ensure that they have comparable ranges. This 
 <features_standardized = StandardScaler().fit_transform(features)>
 
 
-#Modeling
+# Modeling
 After data preprocessing, we trained a machine learning model to predict the compressive strength of the concrete mixture. This section includes:
 
 Linear Regression: A simple model to establish a baseline performance.
@@ -62,7 +62,7 @@ Random Forest: An ensemble method to improve prediction accuracy.
 Support Vector Machines (SVM): To further enhance performance.
 We split the dataset into training and testing sets and evaluated the models based on the root mean squared error (RMSE).
 
-#Evaluation
+# Evaluation
 We used metrics like RMSE and R-squared to evaluate model performance. We also conducted cross-validation to ensure the robustness of the models.
 
 <from sklearn.metrics import mean_squared_error>
