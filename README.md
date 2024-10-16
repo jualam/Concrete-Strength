@@ -62,14 +62,14 @@ We split the dataset into training and testing sets and evaluated the models bas
 # Evaluation
 We used metrics like RMSE and R-squared to evaluate model performance. We also conducted cross-validation to ensure the robustness of the models.
 
-from sklearn.metrics import mean_squared_error
+>from sklearn.metrics import mean_squared_error
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 print(f"Root Mean Squared Error: {rmse}")
 
 
 
-##Results
+# Results
 The Random Forest model showed the best performance, with an RMSE of approximately X and an R-squared value of Y. These metrics indicate that the model is capable of predicting the compressive strength of concrete mixtures with reasonable accuracy.
 
 Further improvement can be made by tuning hyperparameters, exploring more advanced models, or performing additional feature engineering.
