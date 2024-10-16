@@ -29,9 +29,7 @@ seaborn
 scikit-learn
 You can install the required dependencies using pip:
 
-
-<pip install numpy pandas matplotlib seaborn scikit-learn>
-
+pip install numpy pandas matplotlib seaborn scikit-learn
 
 # Data Analysis
 The dataset is first loaded and explored using the following techniques:
@@ -40,18 +38,17 @@ Descriptive statistics: Summary of features using describe() and info().
 Correlation analysis: A correlation matrix is generated to understand the relationships between the features and the target variable (compressive strength).
 We also used visualizations like pairplots and heatmaps to understand feature distributions and correlations.
 
-Example:
-
-<sns.heatmap(concrete.corr(), annot=True, cmap='Blues')>
-<plt.show()>
+sns.heatmap(concrete.corr(), annot=True, cmap='Blues')
+plt.show()
 
 
 # Feature Engineering
 The features were standardized to ensure that they have comparable ranges. This was done using StandardScaler from the sklearn.preprocessing module.
 
-<from sklearn.preprocessing import StandardScaler>
-<features = concrete.iloc[:, :-1].to_numpy()>
-<features_standardized = StandardScaler().fit_transform(features)>
+from sklearn.preprocessing import StandardScaler
+features = concrete.iloc[:, :-1].to_numpy()
+features_standardized = StandardScaler().fit_transform(features)
+
 
 
 # Modeling
@@ -65,12 +62,11 @@ We split the dataset into training and testing sets and evaluated the models bas
 # Evaluation
 We used metrics like RMSE and R-squared to evaluate model performance. We also conducted cross-validation to ensure the robustness of the models.
 
-<from sklearn.metrics import mean_squared_error>
+from sklearn.metrics import mean_squared_error
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+print(f"Root Mean Squared Error: {rmse}")
 
-# Example evaluation
-<mse = mean_squared_error(y_test, y_pred)>
-<rmse = np.sqrt(mse)>
-<print(f"Root Mean Squared Error: {rmse}")>
 
 
 ##Results
