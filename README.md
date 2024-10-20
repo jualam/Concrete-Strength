@@ -55,7 +55,7 @@ features_standardized = StandardScaler().fit_transform(features)
 After data preprocessing, we trained a machine learning model to predict the compressive strength of the concrete mixture. This section includes:
 
 Linear Regression: A simple model to establish a baseline performance.
-Random Forest: An ensemble method to improve prediction accuracy.
+Ridge Regression: An ensemble method to improve prediction accuracy.
 Support Vector Machines (SVM): To further enhance performance.
 We split the dataset into training and testing sets and evaluated the models based on the root mean squared error (RMSE).
 
